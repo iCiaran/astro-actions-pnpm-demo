@@ -1,0 +1,22 @@
+name: PR Links
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build site
+        uses: iciaran/astro-action@dcd26d4a1ed099c0f679b4540496578da996fa78
+
+        with:
+          package-manager: pnpm@latest
+          node-version: 24.13
