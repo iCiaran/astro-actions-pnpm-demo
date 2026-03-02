@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: Build site
-        uses: iciaran/astro-action@dcd26d4a1ed099c0f679b4540496578da996fa78
+        uses: iciaran/astro-action@e27f233ebaca2f3d8780439c79c022d336044b75
 
         with:
           package-manager: pnpm@latest
